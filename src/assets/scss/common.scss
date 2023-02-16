@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+:root {
+  --primary-color: #08fdd8;
+  --secondary-color: #909096;
+  --background-color: #1d1d1d;
+  --header-background-color: #181818;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  color: var(--white);
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tag-decorated {
+  position: relative;
+
+  &::after, &::before {
+    font-family: 'La Belle Aurore', cursive;
+    color: #515152;
+    font-size: 16px;
+    position: absolute;
+  }
+
+  &::before {
+    content: '<body>';
+    left: -2rem;
+    top: -2em;
+  }
+
+  &::after {
+    content: '</body>';
+    left: -2rem;
+    bottom: -2.5em;
+  }
+}
+
+h1.tag-decorated {
+  &::before {
+    content: '<h1>';
+  }
+
+  &::after {
+    content: '</h1>';
+  }
+}
+
+h2.tag-decorated {
+  &::before {
+    content: '<h2>';
+    top: -1em;
+  }
+
+  &::after {
+    content: '</h2>';
+    bottom: -1.5em;
+  }
+}
+
+p.tag-decorated {
+  &::before {
+    content: '<p>';
+  }
+
+  &::after {
+    content: '</p>';
+  }
+}
+
+body {
+  background: var(--background-color);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+
+  &:hover {
+    color: var(--primary-color);
+    transition: color 0.2s ease;
+  }
+}
+
+button {
+  padding: 12px 32px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+  font-size: 14px;
+  letter-spacing: 4px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+
+  &:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    transition: background-color 0.2s linear;
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding: 6rem 0;
+  position: relative;
+  //border-bottom: 2px solid var(--header-background-color);
+}
+
+.content__wrapper {
+  max-width: 1650px;
+  padding: 0 6rem;
+  margin: 0 auto;
+}

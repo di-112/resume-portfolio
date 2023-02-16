@@ -27,8 +27,8 @@ const path = {
   },
   src: {
     html: srcPath + "*.html",
-    css: srcPath + "assets/scss/*.scss",
-    js: srcPath + "assets/js/*.js",
+    css: srcPath + "assets/scss/style.scss",
+    js: srcPath + "assets/js/main.js",
     images: srcPath + "assets/images/**/*.{jpeg,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     fonts: srcPath + "assets/fonts/**/*.{eot, woff, woff2,ttf,svg}",
   },
@@ -61,7 +61,6 @@ function css() {
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(cssBeautify())
-    .pipe(dest(path.build.css))
     .pipe(cssnano({
       zIndex: false,
       discardComments: {
@@ -87,7 +86,6 @@ function js() {
       }
     ))
     .pipe(rigger())
-    .pipe(dest(path.build.js))
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min',
@@ -123,6 +121,11 @@ function clean() {
   return del(path.clean)
 }
 
+function vendorsCss () {
+  return src('node_modules/swiper/swiper-bundle.min.css')
+      .pipe(dest(path.build.css));
+}
+
 function watchFiles() {
   gulp.watch([path.watch.html], html)
   gulp.watch([path.watch.css], css)
@@ -139,7 +142,7 @@ function server() {
   });
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts))
+const build = gulp.series(clean, gulp.parallel(html, css, vendorsCss, js, images, fonts))
 
 const watch = gulp.parallel(build, watchFiles, server)
 

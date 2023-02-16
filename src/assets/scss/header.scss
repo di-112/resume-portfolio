@@ -1,0 +1,41 @@
+.header {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding: 0 64px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--header-background-color);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__nav {
+    .nav__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav__item {
+      border-right: 1px solid #282828;
+      padding: 0 16px;
+      height: 100%;
+
+      a {
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      &:first-child {
+        border-left: 1px solid #282828;
+      }
+    }
+  }
+}

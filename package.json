@@ -27,5 +27,8 @@
     "gulp-uglify": "^3.0.2",
     "panini": "^1.7.2",
     "sass": "^1.58.1"
+  },
+  "dependencies": {
+    "swiper": "^9.0.5"
   }
 }
