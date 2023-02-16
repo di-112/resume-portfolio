@@ -2,15 +2,30 @@
   position: relative;
 
   &__content {
+    max-width: 100%;
+
     p {
       max-width: 500px;
-      margin-bottom: 100px;
+      margin-bottom: 250px;
     }
   }
 
   &__list {
     height: 300px;
-    width: 50%;
+    > button {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+
+      &.prev {
+        left: -150px;
+        z-index: 2;
+      }
+
+      &.next {
+        right: 0
+      }
+    }
   }
 
   &__item {

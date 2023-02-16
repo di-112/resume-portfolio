@@ -1,24 +1,11 @@
-import Swiper, { Navigation } from 'swiper/swiper-bundle.js';
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
-Swiper.use([Navigation]);
-
-new Swiper('.swiper', {
-    freeMode: true,
-    autoplay: {
-        delay: 1000,
-        pauseOnMouseEnter: false
-    },
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-    },
-
+const swiper = new Swiper('.swiper', {
+    spaceBetween: 24,
+    slidesPerView: 3,
+    autoplay: false,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.next',
+        prevEl: '.prev',
     },
 });
