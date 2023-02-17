@@ -139,6 +139,13 @@ section {
   min-height: 100vh;
   padding: 6rem 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  &.show {
+    opacity: 1;
+  }
 }
 
 .section-background {
@@ -150,7 +157,7 @@ section {
   font-size: 20rem;
   color: var(--secondary-color);
   font-weight: 700;
-  z-index: -1;
+  z-index: 0;
   transform: rotate(15deg);
 }
 
@@ -158,4 +165,13 @@ section {
   max-width: 1650px;
   padding: 0 6rem;
   margin: 0 auto;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }

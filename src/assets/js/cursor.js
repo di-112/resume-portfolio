@@ -195,14 +195,8 @@ function initOciliator(remove) {
             ctx.strokeStyle = 'hsla(346,98%,56%,0.25)';
             ctx.lineWidth = 1;
 
-            ctx.strokeStyle = 'hsla('+ctx.frame+',98%,56%,0.25)';
+            ctx.strokeStyle = 'rgb(39,230,106)';
             document.documentElement.style.setProperty('--link', ctx.strokeStyle);
-            // if (color == 1) {
-            //     ctx.strokeStyle = 'hsla(345,98%,56%,0.25)';
-            // } else {
-            //     ctx.strokeStyle = 'hsla(171,98%,56%,0.25)';
-            // }
-
 
             for (var i = 0, tendril; i < settings.trails; i++) {
                 tendril = tendrils[i];

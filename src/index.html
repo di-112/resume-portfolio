@@ -16,37 +16,43 @@
         <nav class="header__nav nav">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="#">About</a>
+                    <a href="" data-path="preview">About</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#">Skills</a>
+                    <a href="" data-path="skills">Skills</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#">Work</a>
+                    <a href="" data-path="works">Works</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#">Contact</a>
+                    <a href="#" data-path="about">Contact</a>
                 </li>
             </ul>
         </nav>
         <div class="header__socials">
-            <img src="./assets/images/socials/github.svg" alt="github-icon">
+            <a href="https://github.com/di-112" target="_blank">
+                <img src="./assets/images/socials/github.svg" alt="github-icon">
+            </a>
         </div>
     </div>
 </header>
 <div class="content__wrapper">
-    <section class="preview">
+    <section class="preview" id="preview">
         <div class="preview__content tag-decorated">
             <h1 class="tag-decorated">
-                <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>,</span><span>W</span><span>o</span><span>r</span><span>l</span><span>d</span>
+                <span>D</span><span>m</span><span>i</span><span>t</span><span>r</span><span>y</span>
+                <span>V</span><span>e</span><span>z</span><span>a</span><span>n</span><span>k</span><span>i</span><span>n</span>
             </h1>
-            <p class="tag-decorated">It's test text</p>
+            <p class="tag-decorated">
+                <span>F</span><span>r</span><span>o</span><span>n</span><span>t</span><span>e</span><span>n</span><span>d</span>
+                <span>d</span><span>e</span><span>v</span><span>e</span><span>l</span><span>o</span><span>p</span><span>e</span><span>r</span>
+            </p>
         </div>
         <button class="preview__button">
             Show more
         </button>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="section-background">Skills</div>
         <h2 class="skills__title title tag-decorated">
             Skills
@@ -119,7 +125,7 @@
             </div>
         </div>
     </section>
-    <section class="works">
+    <section class="works" id="works">
         <div class="section-background">Works</div>
         <h2 class="works__title title tag-decorated">Works</h2>
         <div class="works__content">
@@ -128,39 +134,43 @@
                 adipisicing elit. Dicta esse hic iure magni nulla quam ratione?
                 Est eum modi quisquam.
             </p>
-            <div class="works__list swiper">
-                <div class="swiper-wrapper">
-                    <div class="works__item swiper-slide">
-                        <div class="back" style="background: url('assets/images/works/game-for-memory.png') center / cover"></div>
-                        <button data-projectId="game-for-memory">Show Project</button>
-                    </div>
-                    <div class="works__item swiper-slide">
-                        <div class="back"></div>
-                        <button data-projectId="test2">Show Project</button>
-                    </div>
-                    <div class="works__item swiper-slide">
-                        <div class="back"></div>
-                        <button>Show Project</button>
-                    </div>
-                    <div class="works__item swiper-slide">
-                        <div class="back"></div>
-                        <button>Show Project</button>
-                    </div>
-                    <div class="works__item swiper-slide">
-                        <div class="back"></div>
-                        <button>Show Project</button>
-                    </div>
-                    <div class="works__item swiper-slide">
-                        <div class="back"></div>
-                        <button>Show Project</button>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="works__buttons-container">
-                <button class="works__button-prev">Prev</button>
-                <button class="works__button-next">Next</button>
-            </div>
+          <div class="work__list-wrapper">
+              <div>
+                  <div class="works__list swiper">
+                  <div class="swiper-wrapper">
+                      <div class="works__item swiper-slide">
+                          <div class="back" style="background: url('assets/images/works/game-for-memory.png') center / cover"></div>
+                          <button data-projectId="game-for-memory">Show Project</button>
+                      </div>
+                      <div class="works__item swiper-slide">
+                          <div class="back"></div>
+                          <button data-projectId="test2">Show Project</button>
+                      </div>
+                      <div class="works__item swiper-slide">
+                          <div class="back"></div>
+                          <button>Show Project</button>
+                      </div>
+                      <div class="works__item swiper-slide">
+                          <div class="back"></div>
+                          <button>Show Project</button>
+                      </div>
+                      <div class="works__item swiper-slide">
+                          <div class="back"></div>
+                          <button>Show Project</button>
+                      </div>
+                      <div class="works__item swiper-slide">
+                          <div class="back"></div>
+                          <button>Show Project</button>
+                      </div>
+                  </div>
+              </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="works__buttons-container">
+                  <button class="works__button-prev">Prev</button>
+                  <button class="works__button-next">Next</button>
+              </div>
+          </div>
         </div>
     </section>
 </div>
@@ -194,6 +204,7 @@
         </div>
     </div>
 </div>
+<canvas id="canvas"></canvas>
 </body>
 <script type="module" src="assets/js/main.min.js"></script>
 </html>

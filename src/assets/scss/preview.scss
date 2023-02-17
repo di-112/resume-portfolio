@@ -9,6 +9,7 @@
   &__content {
     position: relative;
     padding: 1rem 2rem;
+    cursor: default;
 
     h1 {
       line-height: 100%;
@@ -19,10 +20,26 @@
 
       & span {
         display: inline-block;
+        animation: .35s colorA;
+        animation-fill-mode: forwards;
+        opacity: 0;
 
         &:hover {
-          animation: rubberBand .7s;
+          animation: .7s rubberBand;
           color: var(--primary-color);
+          animation-fill-mode: none !important;;
+          opacity: 1 !important;;
+          animation-delay: 0s !important;
+        }
+
+        &:hover {
+          color: var(--primary-color) !important;
+        }
+
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            animation-delay: (0.05s*$i);
+          }
         }
       }
     }
@@ -33,6 +50,31 @@
       position: relative;
       line-height: 100%;
       transform: translateX(42px);
+
+      & span {
+        display: inline-block;
+        animation: .35s colorA;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+        @for $i from 1 through 20 {
+          &:nth-child(#{$i}) {
+            animation-delay: ((0.05s * $i) + 14 * 0.05s);
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes colorA {
+  0% {
+    color: var(--primary-color);
+    opacity: 1;
+    transform: scale(1.5);
+  }
+  100% {
+    color: white;
+    opacity: 1;
   }
 }

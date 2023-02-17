@@ -1,13 +1,26 @@
 .works {
   position: relative;
+  padding-bottom: 0;
 
   &__content {
     max-width: 100%;
+    flex-grow: 1;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
 
     p {
       max-width: 500px;
-      margin-bottom: 224px;
     }
+  }
+
+  .work__list-wrapper {
+    flex-grow: 1;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .swiper-pagination {
@@ -26,8 +39,8 @@
   &__list {
     height: 294px;
     margin-bottom: 24px;
-    min-width: 0;
   }
+
 
   &__buttons-container {
     text-align: center;
