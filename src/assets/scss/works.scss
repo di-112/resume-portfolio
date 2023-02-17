@@ -6,25 +6,34 @@
 
     p {
       max-width: 500px;
-      margin-bottom: 250px;
+      margin-bottom: 224px;
+    }
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-bottom: 24px;
+
+    &-bullet {
+      background: var(--secondary-color);
+
+      &-active {
+        background: var(--primary-color);
+      }
     }
   }
 
   &__list {
     height: 300px;
-    > button {
-      position: absolute;
-      top: 50%;
-      z-index: 2;
+    margin-bottom: 24px;
+    min-width: 0;
+  }
 
-      &.prev {
-        left: -150px;
-        z-index: 2;
-      }
+  &__buttons-container {
+    text-align: center;
 
-      &.next {
-        right: 0
-      }
+    button:first-child {
+      margin-right: 12px;
     }
   }
 
@@ -32,9 +41,14 @@
     display: block;
     width: 300px;
     height: 300px;
-    background: url('../images/fake-project.jpg') center / cover;
     position: relative;
     transition: opacity 0.2s ease;
+
+    .back {
+      width: 100%;
+      height: 100%;
+      background: url('../images/fake-project.jpg') center / cover;
+    }
 
     button {
       opacity: 0;
@@ -46,24 +60,13 @@
     }
 
     &:hover {
-      opacity: 1;
+      .back {
+        opacity: 0.5;
+      }
 
       button {
         opacity: 1;
       }
     }
-  }
-
-  &__bg {
-    font-family: 'La Belle Aurore', sans-serif;
-    opacity: 0.1;
-    position: absolute;
-    right: -7rem;
-    top: 5%;
-    font-size: 20rem;
-    color: var(--secondary-color);
-    font-weight: 700;
-    z-index: -1;
-    transform: rotate(15deg);
   }
 }

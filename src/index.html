@@ -46,40 +46,129 @@
             Show more
         </button>
     </section>
-
+    <section class="skills">
+        <div class="section-background">Skills</div>
+        <h2 class="skills__title title tag-decorated">
+            Skills
+        </h2>
+        <div class="skills__content">
+            <div class="skills__block">
+                <div class="skills__classic">
+                    <h3 class="skills__title subtitle">
+                        Classic
+                    </h3>
+                    <ul class="skills__list">
+                        <li class="skills__item"><img src="assets/images/skills/html.png" alt="html"> HTML5</li>
+                        <li class="skills__item"><img src="assets/images/skills/css.png" alt="css">CSS3</li>
+                        <li class="skills__item"><img src="assets/images/skills/sass.png" width="16" alt="SCSS">Sass/Scss/Less
+                        </li>
+                        <li class="skills__item"><img src="assets/images/skills/js.png" alt="JS">JS (ES6)</li>
+                        <li class="skills__item"><img src="assets/images/skills/typescript.png" width="16" alt="TS">TS
+                        </li>
+                        <li class="skills__item"><img src="assets/images/skills/react.png" alt="React">React</li>
+                        <li class="skills__item">React Query</li>
+                        <li class="skills__item">React Hook Form</li>
+                    </ul>
+                </div>
+                <div class="skills__frameworks">
+                    <h3 class="skills__title subtitle">
+                        UI Frameworks
+                    </h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="16"
+                                 alt="AntDesign">
+                            AntDesign
+                        </li>
+                        <li class="skills__item">
+                            <img src="assets/images/skills/material-ui.png" width="16" alt="MaterialUI">
+                            MaterialUI
+                        </li>
+                        <li class="skills__item">Chakra</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skills__block offset">
+                <div class="skills__state">
+                    <h3 class="skills__title subtitle">
+                        State Managers
+                    </h3>
+                    <ul class="skills__list">
+                        <li class="skills__item"><img src="assets/images/skills/redux.png" width="16" alt="Redux">
+                            Redux, Redux Toolkit, RTK Query
+                        </li>
+                        <li class="skills__item">MobX</li>
+                        <li class="skills__item">Zustand</li>
+                    </ul>
+                </div>
+                <div class="skills__builders">
+                    <h3 class="skills__title subtitle">
+                        State Managers
+                    </h3>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            <img src="assets/images/skills/webpack.png" width="16" alt="Webpack">Webpack
+                        </li>
+                        <li class="skills__item">Vite</li>
+                        <li class="skills__item">Gulp</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="sphere-wrap">
+                <canvas id="sphere"></canvas>
+            </div>
+        </div>
+    </section>
     <section class="works">
-        <div class="works__bg">Works</div>
+        <div class="section-background">Works</div>
+        <h2 class="works__title title tag-decorated">Works</h2>
         <div class="works__content">
-            <h2 class="title tag-decorated">Works</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta esse hic iure magni nulla quam ratione?
-                Est eum modi quisquam.</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Dicta esse hic iure magni nulla quam ratione?
+                Est eum modi quisquam.
+            </p>
             <div class="works__list swiper">
                 <div class="swiper-wrapper">
                     <div class="works__item swiper-slide">
+                        <div class="back"></div>
                         <button>Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
+                        <div class="back"></div>
                         <button>Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
+                        <div class="back"></div>
                         <button>Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
+                        <div class="back"></div>
                         <button>Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
+                        <div class="back"></div>
                         <button>Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
+                        <div class="back"></div>
                         <button>Show Project</button>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-            <button class="prev">Prev</button>
-            <button class="next">Next</button>
+            <div class="swiper-pagination"></div>
+            <div class="works__buttons-container">
+                <button class="works__button-prev">Prev</button>
+                <button class="works__button-next">Next</button>
+            </div>
         </div>
     </section>
+</div>
+<div class="modals">
+    <div class="modals__overlay"></div>
+    <div class="modals__container">
+        <div class="modal">Test</div>
+    </div>
 </div>
 </body>
 <script type="module" src="assets/js/main.min.js"></script>
