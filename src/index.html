@@ -103,7 +103,7 @@
                 </div>
                 <div class="skills__builders">
                     <h3 class="skills__title subtitle">
-                        State Managers
+                        Builders
                     </h3>
                     <ul class="skills__list">
                         <li class="skills__item">
@@ -131,12 +131,12 @@
             <div class="works__list swiper">
                 <div class="swiper-wrapper">
                     <div class="works__item swiper-slide">
-                        <div class="back"></div>
-                        <button>Show Project</button>
+                        <div class="back" style="background: url('assets/images/works/game-for-memory.png') center / cover"></div>
+                        <button data-projectId="game-for-memory">Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
                         <div class="back"></div>
-                        <button>Show Project</button>
+                        <button data-projectId="test2">Show Project</button>
                     </div>
                     <div class="works__item swiper-slide">
                         <div class="back"></div>
@@ -164,10 +164,34 @@
         </div>
     </section>
 </div>
-<div class="modals">
-    <div class="modals__overlay"></div>
-    <div class="modals__container">
-        <div class="modal">Test</div>
+<div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+        <div class="modal__close">
+            <span></span>
+        </div>
+        <h2 class="modal__title subtitle"></h2>
+        <div class="modal__flex">
+            <div class="modal__img"></div>
+            <div class="modal__info">
+                <div class="modal__description description">
+                    <h3 class="description__title subtitle">Description: </h3>
+                    <p class="description__content offset"></p>
+                </div>
+                <div class="modal__stack stack">
+                    <h3 class="stack__title subtitle">Stack: </h3>
+                    <p class="stack__content offset"></p>
+                </div>
+                <div class="modal__url url">
+                    <h3 class="url__title subtitle">Url: </h3>
+                    <a href="/" class="url__content offset" target="_blank"></a>
+                </div>
+                <div class="modal__github-url github-url">
+                    <h3 class="github-url__title subtitle">GitHub: </h3>
+                    <a href="/" class="github-url__content offset" target="_blank"></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
