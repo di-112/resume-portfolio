@@ -11,7 +11,11 @@
     justify-content: center;
 
     p {
-      max-width: 500px;
+      font-size: 1.2rem;
+      max-width: 800px;
+      &:first-letter {
+        padding-left: 0.5rem;
+      }
     }
   }
 

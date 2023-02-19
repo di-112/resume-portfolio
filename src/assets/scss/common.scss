@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
+$maxWidth: 1920;
+@mixin font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
 :root {
   --primary-color: #08fdd8;
   --secondary-color: #909096;
@@ -23,14 +30,15 @@ ul, li {
 
 .title {
   color: var(--primary-color);
-  font-size: 2rem;
+  @include font(32, 24);
   margin-bottom: 2rem;
 }
 
 .subtitle {
   color: var(--primary-color);
   font-size: 1.3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: -8px;
 }
 
 .tag-decorated {
@@ -110,7 +118,7 @@ a {
   text-decoration: none;
   color: var(--secondary-color);
 
-  &:hover {
+  &:hover, &.active {
     color: var(--primary-color);
     transition: color 0.2s ease;
   }
@@ -146,6 +154,16 @@ section {
   &.show {
     opacity: 1;
   }
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+  background: #08fdd8;
+  border-radius: 8px;
 }
 
 .section-background {

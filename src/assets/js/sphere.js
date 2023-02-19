@@ -11,7 +11,6 @@ function canvasApp() {
     let displayWidth;
     let displayHeight;
     let timer;
-    let wait;
     let count;
     let numToAddEachFrame;
     let particleList;
@@ -42,8 +41,7 @@ function canvasApp() {
     init();
     window.addEventListener('resize', init, false);
     function init() {
-        wait = 1;
-        count = wait - 1;
+        count = 0;
         numToAddEachFrame = 8;
         particleAlpha = 1;
         displayWidth = theCanvas.width = sphere_wrap.offsetWidth;
@@ -59,7 +57,7 @@ function canvasApp() {
         randAccelZ = 0.1;
         gravity = -0;
         particleRad = 2.5; // размер частиц
-        sphereCenterX = 0;
+        sphereCenterX =0;
         sphereCenterY = 0;
         sphereCenterZ = -3 - sphereRad;
         zeroAlphaDepth = -750;
@@ -69,7 +67,7 @@ function canvasApp() {
     }
     function onTimer() {
         count++;
-        if (count >= wait) {
+        if (count >= 0) {
             count = 0;
             for (i = 0; i < numToAddEachFrame; i++) {
                 theta = Math.random()*2*Math.PI;
@@ -144,7 +142,6 @@ function canvasApp() {
     }
     function addParticle(x0,y0,z0,vx0,vy0,vz0) {
         let newParticle;
-        let color;
         if (recycleBin.first != null) {
             newParticle = recycleBin.first;
             if (newParticle.next != null) {

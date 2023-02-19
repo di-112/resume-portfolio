@@ -7,25 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <title>Document</title>
+    <link rel="icon" href="./assets/images/skills/react.png">
+    <title>Dmitry Vezankin (Frontend Developer)</title>
 </head>
 <body>
 <header class="header">
+    <div class="progress">
+        <div class="progress__value"></div>
+    </div>
     <div class="header__logo"></div>
     <div class="header__content">
         <nav class="header__nav nav">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="" data-path="preview">About</a>
+                    <a href="#preview" data-path="preview">Главная</a>
                 </li>
                 <li class="nav__item">
-                    <a href="" data-path="skills">Skills</a>
+                    <a href="#skills" data-path="skills">Навыки</a>
                 </li>
                 <li class="nav__item">
-                    <a href="" data-path="works">Works</a>
+                    <a href="#about" data-path="about">Обо мне</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" data-path="about">Contact</a>
+                    <a href="#works" data-path="works">Портфолио</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" data-path="contact">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -49,13 +56,13 @@
             </p>
         </div>
         <button class="preview__button">
-            Show more
+            Показать больше
         </button>
     </section>
     <section class="skills" id="skills">
         <div class="section-background">Skills</div>
         <h2 class="skills__title title tag-decorated">
-            Skills
+            Навыки
         </h2>
         <div class="skills__content">
             <div class="skills__block">
@@ -125,52 +132,102 @@
             </div>
         </div>
     </section>
+    <section class="about" id="about">
+        <div class="section-background">About</div>
+        <h2 class="title tag-decorated">Обо мне</h2>
+        <div class="about__content">
+            <div class="about__flex">
+                <div class="about__me">
+                    <h3 class="subtitle">Качества</h3>
+                    <ul>
+                        <li>Ответственность</li>
+                        <li>Внимательность</li>
+                        <li>Целеустремленность</li>
+                        <li>Трудолюбие</li>
+                        <li>Дисциплинированность</li>
+                        <li>Обучаемость</li>
+                    </ul>
+                </div>
+                <div class="about__education education">
+                    <h3 class="subtitle">Образование</h3>
+                    <p class="education__years">2016-2020</p>
+                    <p class="education__university"><span>ВУЗ: </span>НИУ МИЭТ</p>
+                    <p class="education__faculty"><span>Факультет: </span>НИУ МИЭТ</p>
+                    <p class="education__speciality"><span>Направление: </span>Инфоматика и вычистлительная техника</p>
+                </div>
+            </div>
+            <div class="about__working working">
+                <h3 class="subtitle">Опыт работы</h3>
+               <div class="flex">
+                   <div class="working__block">
+                       <h3 class="subtitle">Demis Group</h3>
+                       <p>Май 2021 - Июль 2021</p>
+                       <p><span>Должность: </span>Junior Fullstack разработчик</p>
+                       <p><span>Обязанности: </span>Seo продвижение сайтов, корректировка верстки сайтов, исправление семантики, изменение контента, фикс багов</p>
+                   </div>
+                   <div class="working__block">
+                       <h3 class="subtitle">Fly Code</h3>
+                       <p>Август 2021 - Сентябрь 2021</p>
+                       <p><span>Должность: </span>Frontend разработчик</p>
+                       <p><span>Обязанности: </span>Разработка логики пользовательского интерфейса, исправление багов, верстка</p>
+                   </div>
+               </div>
+                <div class="working__block">
+                    <h3 class="subtitle">ZenCode</h3>
+                    <p>Сентябрь 2021 - Февраль 2023</p>
+                    <p><span>Должность: </span>Frontend-разработчик</p>
+                    <p><span>Обязанности: </span>Исправление багов, разработка логики пользовательского интерфейса, оптимизация, исправление сборки, корректировки архитектуры приложения, корректировки линтера, верстка, коммуникации с backend-разработчиками, аналитиками и дизайнером</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="works" id="works">
         <div class="section-background">Works</div>
-        <h2 class="works__title title tag-decorated">Works</h2>
+        <h2 class="works__title title tag-decorated">Портфолио</h2>
         <div class="works__content">
             <p>
-                Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Dicta esse hic iure magni nulla quam ratione?
-                Est eum modi quisquam.
+                Портфолио собрано из пет-проектов, разработоанных на React. Реализованы собственные кофиги для webpack,
+                eslint. Дизайн каждого приложения выполнен адаптивно. Стек и ссылки для каждого проекта достуны в
+                подробном описании
             </p>
-          <div class="work__list-wrapper">
-              <div>
-                  <div class="works__list swiper">
-                  <div class="swiper-wrapper">
-                      <div class="works__item swiper-slide">
-                          <div class="back" style="background: url('assets/images/works/game-for-memory.png') center / cover"></div>
-                          <button data-projectId="game-for-memory">Show Project</button>
-                      </div>
-                      <div class="works__item swiper-slide">
-                          <div class="back"></div>
-                          <button data-projectId="test2">Show Project</button>
-                      </div>
-                      <div class="works__item swiper-slide">
-                          <div class="back"></div>
-                          <button>Show Project</button>
-                      </div>
-                      <div class="works__item swiper-slide">
-                          <div class="back"></div>
-                          <button>Show Project</button>
-                      </div>
-                      <div class="works__item swiper-slide">
-                          <div class="back"></div>
-                          <button>Show Project</button>
-                      </div>
-                      <div class="works__item swiper-slide">
-                          <div class="back"></div>
-                          <button>Show Project</button>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="works__buttons-container">
-                  <button class="works__button-prev">Prev</button>
-                  <button class="works__button-next">Next</button>
-              </div>
-          </div>
+            <div class="work__list-wrapper">
+                <div>
+                    <div class="works__list swiper">
+                        <div class="swiper-wrapper">
+                            <div class="works__item swiper-slide">
+                                <div class="back"
+                                     style="background: url('assets/images/works/game-for-memory.png') center / cover"></div>
+                                <button data-projectId="game-for-memory">Открыть</button>
+                            </div>
+                            <div class="works__item swiper-slide">
+                                <div class="back"></div>
+                                <button data-projectId="test2">Открыть</button>
+                            </div>
+                            <div class="works__item swiper-slide">
+                                <div class="back"></div>
+                                <button>Открыть</button>
+                            </div>
+                            <div class="works__item swiper-slide">
+                                <div class="back"></div>
+                                <button>Открыть</button>
+                            </div>
+                            <div class="works__item swiper-slide">
+                                <div class="back"></div>
+                                <button>Открыть</button>
+                            </div>
+                            <div class="works__item swiper-slide">
+                                <div class="back"></div>
+                                <button>Открыть</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="works__buttons-container">
+                    <button class="works__button-prev">Назад</button>
+                    <button class="works__button-next">Дальше</button>
+                </div>
+            </div>
         </div>
     </section>
 </div>
@@ -185,11 +242,11 @@
             <div class="modal__img"></div>
             <div class="modal__info">
                 <div class="modal__description description">
-                    <h3 class="description__title subtitle">Description: </h3>
+                    <h3 class="description__title subtitle">Описание: </h3>
                     <p class="description__content offset"></p>
                 </div>
                 <div class="modal__stack stack">
-                    <h3 class="stack__title subtitle">Stack: </h3>
+                    <h3 class="stack__title subtitle">Стек: </h3>
                     <p class="stack__content offset"></p>
                 </div>
                 <div class="modal__url url">

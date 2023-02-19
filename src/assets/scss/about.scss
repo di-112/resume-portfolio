@@ -1,0 +1,65 @@
+.about {
+
+  font-size: 1.2rem;
+
+  .title {
+    margin-bottom: 5rem;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    gap: 10rem;
+  }
+
+  &__me {
+    font-size: 1rem;
+
+    li {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  .education, .working {
+    p {
+      margin-bottom: 1rem;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .working {
+
+    padding-top: 4rem;
+
+    &__block {
+      .subtitle {
+        font-size: 1.2rem;
+      }
+      width: 60%;
+      padding-left: 2rem;
+    }
+
+    .flex {
+      display: flex;
+      gap: 5rem;
+
+      .working__block {
+        width: 40%;
+      }
+    }
+
+    > div {
+      margin-bottom: 4rem;
+    }
+  }
+}

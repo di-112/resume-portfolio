@@ -21,6 +21,7 @@ const modalsData = [
 
 const buttons = document.querySelectorAll('.works__item button')
 const modalNode = document.querySelector('.modal')
+const headerContent = document.querySelector('.header__content')
 const modalButtonClose = document.querySelector('.modal__close')
 const modalOverlay = document.querySelector('.modal__overlay')
 
@@ -29,12 +30,14 @@ const openModal = () => {
     modalNode.classList.add('open')
     document.body.style.overflowY = 'hidden'
     document.body.style.paddingRight = '8px'
+    headerContent.style.paddingRight = '8px'
 }
 
 const hideModal = () => {
     modalNode.classList.remove('open')
     document.body.style.overflowY = 'auto'
     document.body.style.paddingRight = '0'
+    headerContent.style.paddingRight = '0'
 }
 
 modalButtonClose.addEventListener('click' , hideModal)

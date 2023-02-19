@@ -1,3 +1,5 @@
+@import "common";
+
 .preview {
   height: 100vh;
   display: flex;
@@ -13,7 +15,7 @@
 
     h1 {
       line-height: 100%;
-      font-size: 5rem;
+      @include font(80, 32);
       font-weight: 700;
       position: relative;
       margin-bottom: 52px;
@@ -25,15 +27,11 @@
         opacity: 0;
 
         &:hover {
-          animation: .7s rubberBand;
-          color: var(--primary-color);
-          animation-fill-mode: none !important;;
-          opacity: 1 !important;;
-          animation-delay: 0s !important;
-        }
-
-        &:hover {
+          //animation: .7s rubberBand;
           color: var(--primary-color) !important;
+          // animation-fill-mode: none !important;;
+          opacity: 1 !important;;
+         // animation-delay: 0s !important;
         }
 
         @for $i from 1 through 20 {
@@ -45,7 +43,7 @@
     }
 
     p {
-      font-size: 3rem;
+      @include font(40, 24);
       font-weight: 700;
       position: relative;
       line-height: 100%;
@@ -56,6 +54,14 @@
         animation: .35s colorA;
         animation-fill-mode: forwards;
         opacity: 0;
+
+        &:hover {
+         // animation: .7s rubberBand;
+          color: var(--primary-color) !important;
+         // animation-fill-mode: none !important;;
+          opacity: 1 !important;;
+        //  animation-delay: 0s !important;
+        }
 
         @for $i from 1 through 20 {
           &:nth-child(#{$i}) {

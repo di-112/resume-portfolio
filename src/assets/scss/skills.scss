@@ -1,14 +1,14 @@
 .skills {
   &__content {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     padding-left: 2rem;
     flex-grow: 1;
     align-items: center;
   }
 
   &__block {
-    gap: 2rem;
+    gap: 4rem;
     display: flex;
     min-width: 15%;
     flex-direction: column;
@@ -20,11 +20,11 @@
   }
 
   &__item {
-    font-size: 1rem;
-    gap: 8px;
+    gap: 0.5rem;
     display: flex;
     align-items: center;
     cursor: default;
+    font-size: 1.2rem;
 
     &:hover {
       color: var(--primary-color);
