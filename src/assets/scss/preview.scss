@@ -7,36 +7,39 @@
   align-items: flex-start;
   justify-content: center;
   gap: 100px;
+  position: relative;
 
-  &__content {
-    position: relative;
-    padding: 1rem 2rem;
-    cursor: default;
-
-    h1 {
-      line-height: 100%;
-      @include font(80, 32);
-      font-weight: 700;
+  &.show {
+    .preview__content {
       position: relative;
-      margin-bottom: 52px;
+      padding: 1rem 2rem;
+      cursor: default;
 
-      & span {
-        display: inline-block;
-        animation: .35s colorA;
-        animation-fill-mode: forwards;
-        opacity: 0;
+      h1 {
+        line-height: 100%;
+        @include font(80, 32);
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 52px;
 
-        &:hover {
-          //animation: .7s rubberBand;
-          color: var(--primary-color) !important;
-          // animation-fill-mode: none !important;;
-          opacity: 1 !important;;
-         // animation-delay: 0s !important;
-        }
+        & span {
+          display: inline-block;
+          animation: .35s colorA;
+          animation-fill-mode: forwards;
+          opacity: 0;
 
-        @for $i from 1 through 20 {
-          &:nth-child(#{$i}) {
-            animation-delay: (0.05s*$i);
+          &:hover {
+            //animation: .7s rubberBand;
+            color: var(--primary-color) !important;
+            // animation-fill-mode: none !important;;
+            opacity: 1 !important;;
+            // animation-delay: 0s !important;
+          }
+
+          @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+              animation-delay: (0.05s*$i);
+            }
           }
         }
       }
@@ -56,11 +59,11 @@
         opacity: 0;
 
         &:hover {
-         // animation: .7s rubberBand;
+          // animation: .7s rubberBand;
           color: var(--primary-color) !important;
-         // animation-fill-mode: none !important;;
+          // animation-fill-mode: none !important;;
           opacity: 1 !important;;
-        //  animation-delay: 0s !important;
+          //  animation-delay: 0s !important;
         }
 
         @for $i from 1 through 20 {

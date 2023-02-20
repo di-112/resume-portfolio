@@ -66,7 +66,7 @@
         </h2>
         <div class="skills__content">
             <div class="skills__block">
-                <div class="skills__classic">
+                <div class="skills__collection skills__classic">
                     <h3 class="skills__title subtitle">
                         Classic
                     </h3>
@@ -83,7 +83,7 @@
                         <li class="skills__item">React Hook Form</li>
                     </ul>
                 </div>
-                <div class="skills__frameworks">
+                <div class="skills__collection skills__frameworks">
                     <h3 class="skills__title subtitle">
                         UI Frameworks
                     </h3>
@@ -102,7 +102,7 @@
                 </div>
             </div>
             <div class="skills__block offset">
-                <div class="skills__state">
+                <div class="skills__collection skills__state">
                     <h3 class="skills__title subtitle">
                         State Managers
                     </h3>
@@ -114,7 +114,7 @@
                         <li class="skills__item">Zustand</li>
                     </ul>
                 </div>
-                <div class="skills__builders">
+                <div class="skills__collection skills__builders">
                     <h3 class="skills__title subtitle">
                         Builders
                     </h3>
@@ -158,25 +158,29 @@
             </div>
             <div class="about__working working">
                 <h3 class="subtitle">Опыт работы</h3>
-               <div class="flex">
-                   <div class="working__block">
-                       <h3 class="subtitle">Demis Group</h3>
-                       <p>Май 2021 - Июль 2021</p>
-                       <p><span>Должность: </span>Junior Fullstack разработчик</p>
-                       <p><span>Обязанности: </span>Seo продвижение сайтов, корректировка верстки сайтов, исправление семантики, изменение контента, фикс багов</p>
-                   </div>
-                   <div class="working__block">
-                       <h3 class="subtitle">Fly Code</h3>
-                       <p>Август 2021 - Сентябрь 2021</p>
-                       <p><span>Должность: </span>Frontend разработчик</p>
-                       <p><span>Обязанности: </span>Разработка логики пользовательского интерфейса, исправление багов, верстка</p>
-                   </div>
-               </div>
+                <div class="flex">
+                    <div class="working__block">
+                        <h3 class="subtitle">Demis Group</h3>
+                        <p>Май 2021 - Июль 2021</p>
+                        <p><span>Должность: </span>Junior Fullstack разработчик</p>
+                        <p><span>Обязанности: </span>Seo продвижение сайтов, корректировка верстки сайтов, исправление
+                            семантики, изменение контента, фикс багов</p>
+                    </div>
+                    <div class="working__block">
+                        <h3 class="subtitle">Fly Code</h3>
+                        <p>Август 2021 - Сентябрь 2021</p>
+                        <p><span>Должность: </span>Frontend разработчик</p>
+                        <p><span>Обязанности: </span>Разработка логики пользовательского интерфейса, исправление багов,
+                            верстка</p>
+                    </div>
+                </div>
                 <div class="working__block">
                     <h3 class="subtitle">ZenCode</h3>
                     <p>Сентябрь 2021 - Февраль 2023</p>
                     <p><span>Должность: </span>Frontend-разработчик</p>
-                    <p><span>Обязанности: </span>Исправление багов, разработка логики пользовательского интерфейса, оптимизация, исправление сборки, корректировки архитектуры приложения, корректировки линтера, верстка, коммуникации с backend-разработчиками, аналитиками и дизайнером</p>
+                    <p><span>Обязанности: </span>Исправление багов, разработка логики пользовательского интерфейса,
+                        оптимизация, исправление сборки, корректировки архитектуры приложения, корректировки линтера,
+                        верстка, коммуникации с backend-разработчиками, аналитиками и дизайнером</p>
                 </div>
             </div>
         </div>
@@ -191,43 +195,42 @@
                 подробном описании
             </p>
             <div class="work__list-wrapper">
-                <div>
-                    <div class="works__list swiper">
-                        <div class="swiper-wrapper">
-                            <div class="works__item swiper-slide">
-                                <div class="back"
-                                     style="background: url('assets/images/works/game-for-memory.png') center / cover"></div>
-                                <button data-projectId="game-for-memory">Открыть</button>
-                            </div>
-                            <div class="works__item swiper-slide">
-                                <div class="back"></div>
-                                <button data-projectId="test2">Открыть</button>
-                            </div>
-                            <div class="works__item swiper-slide">
-                                <div class="back"></div>
-                                <button>Открыть</button>
-                            </div>
-                            <div class="works__item swiper-slide">
-                                <div class="back"></div>
-                                <button>Открыть</button>
-                            </div>
-                            <div class="works__item swiper-slide">
-                                <div class="back"></div>
-                                <button>Открыть</button>
-                            </div>
-                            <div class="works__item swiper-slide">
-                                <div class="back"></div>
-                                <button>Открыть</button>
-                            </div>
+            <div>
+                <div class="works__list swiper">
+                    <div class="swiper-wrapper">
+                        <div class="works__item swiper-slide">
+                            <img class="back" src="assets/images/works/game-for-memory.png" alt="Игра для развития памяти" />
+                            <button data-projectId="game-for-memory">Открыть</button>
+                        </div>
+                        <div class="works__item swiper-slide">
+                            <img class="back" src="assets/images/works/books-shop.png" alt="Магазин книг" />
+                            <button data-projectId="books-shop">Открыть</button>
+                        </div>
+                        <div class="works__item swiper-slide">
+                            <div class="back"></div>
+                            <button>Открыть</button>
+                        </div>
+                        <div class="works__item swiper-slide">
+                            <div class="back"></div>
+                            <button>Открыть</button>
+                        </div>
+                        <div class="works__item swiper-slide">
+                            <div class="back"></div>
+                            <button>Открыть</button>
+                        </div>
+                        <div class="works__item swiper-slide">
+                            <div class="back"></div>
+                            <button>Открыть</button>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="works__buttons-container">
-                    <button class="works__button-prev">Назад</button>
-                    <button class="works__button-next">Дальше</button>
-                </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="works__buttons-container">
+                <button class="works__button-prev">Назад</button>
+                <button class="works__button-next">Дальше</button>
+            </div>
+        </div>
         </div>
     </section>
 </div>

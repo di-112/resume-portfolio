@@ -99,10 +99,12 @@ p.tag-decorated {
 body {
   background: var(--background-color);
   overflow-x: hidden;
+  height: 100vh;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -153,6 +155,11 @@ section {
   transition: opacity 0.5s ease;
   &.show {
     opacity: 1;
+
+    .section-background {
+      opacity: 0.1;
+      transition: opacity 1.5s ease;
+    }
   }
 }
 
@@ -168,7 +175,7 @@ section {
 
 .section-background {
   font-family: 'La Belle Aurore', sans-serif;
-  opacity: 0.1;
+  opacity: 0;
   position: absolute;
   right: -7rem;
   top: 5%;

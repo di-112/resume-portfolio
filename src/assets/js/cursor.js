@@ -193,7 +193,7 @@ function initOciliator(remove) {
       ctx.strokeStyle = 'hsla(346,98%,56%,0.25)';
       ctx.lineWidth = 1;
 
-      ctx.strokeStyle = 'rgb(39,230,106)';
+      ctx.strokeStyle = '#08fdd8';
       document.documentElement.style.setProperty('--link', ctx.strokeStyle);
 
       for (var i = 0, tendril; i < settings.trails; i++) {
