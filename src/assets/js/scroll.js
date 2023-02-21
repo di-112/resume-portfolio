@@ -26,8 +26,6 @@ window.addEventListener('scroll', progressBar, {
 });
 
 
-
-
 function onEntry(entry) {
   entry.forEach(change => {
     if(change.target.classList.contains('show')) {

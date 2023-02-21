@@ -1,0 +1,46 @@
+include ../data/about
+
+mixin renderPrevJob(job)
+    .working__block
+        h3.subtitle=job.company
+        p=job.period
+        p
+            span Должность:
+            | &nbsp
+            =job.position
+        p
+            span Обязанности:
+            | &nbsp
+            =job.duties
+
+section.about#about
+    .section-background About
+    h2.title.tag-decorated Обо мне
+    .about__content
+        .about__flex
+            .about__me
+                h3.subtitle Качества
+                ul
+                  for i in characteristics
+                      li=i
+            .about__education.education
+                h3.subtitle Образование
+                p.education__years=education.period
+                p.education__university
+                    span ВУЗ:
+                    | &nbsp;
+                    =education.university
+                p.education__faculty
+                    span Факультет:
+                    | &nbsp;
+                    =education.faculty
+                p.education__speciality
+                    span Направление:
+                    | &nbsp;
+                    =education.direction
+        .about__working.working
+            h3.subtitle Опыт работы
+            .flex
+                +renderPrevJob(prevJobs[0])
+                +renderPrevJob(prevJobs[1])
+            +renderPrevJob(prevJobs[2])

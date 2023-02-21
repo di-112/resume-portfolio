@@ -11,6 +11,7 @@ const rigger = require('gulp-rigger')
 const plumber = require('gulp-plumber')
 const imagemin = require('gulp-imagemin')
 const del = require('del')
+const pug = require('gulp-pug');
 const notify = require('gulp-notify')
 const browserSync = require('browser-sync').create()
 
@@ -26,14 +27,14 @@ const path = {
     fonts: distPath + "assets/fonts/",
   },
   src: {
-    html: srcPath + "*.html",
+    html: srcPath + "*.pug",
     css: srcPath + "assets/scss/style.scss",
     js: srcPath + "assets/js/main.js",
     images: srcPath + "assets/images/**/*.{jpeg,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     fonts: srcPath + "assets/fonts/**/*.{eot, woff, woff2,ttf,svg}",
   },
   watch: {
-    html: srcPath + "**/*.html",
+    html: srcPath + "**/*.pug",
     css: srcPath + "assets/scss/**/*.scss",
     js: srcPath + "assets/js/**/*.js",
     images: srcPath + "assets/images/**/*.{jpeg,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
@@ -44,6 +45,7 @@ const path = {
 
 function html() {
   return src(path.src.html, {base: srcPath})
+    .pipe(pug())
     .pipe(plumber())
     .pipe(dest(path.build.html))
     .pipe(browserSync.reload({stream: true}))

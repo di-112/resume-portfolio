@@ -1,0 +1,22 @@
+include ../data/works
+
+mixin renderWork(work)
+    .works__item.swiper-slide
+        img.back(src='assets/images/works/'+work.image, alt=work.title)
+        button(data-projectid=work.id) Открыть
+
+section.works#works
+    .section-background Works
+    h2.works__title.title.tag-decorated Портфолио
+    .works__content
+        p Портфолио собрано из пет-проектов, разработоанных на React. Реализованы собственные кофиги для webpack, eslint. Дизайн каждого приложения выполнен адаптивно. Стек и ссылки для каждого проекта достуны в подробном описании
+        .work__list-wrapper
+            div
+                .works__list.swiper
+                    .swiper-wrapper
+                        for i in myWorks
+                            +renderWork(i)
+            .swiper-pagination
+            .works__buttons-container
+                button.works__button-prev Назад
+                button.works__button-next Дальше

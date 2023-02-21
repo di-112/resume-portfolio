@@ -42,8 +42,12 @@ modalButtonClose.addEventListener('click' , hideModal)
 
 modalOverlay.addEventListener('click', hideModal)
 
+console.log({buttons})
+
 buttons.forEach(button => button.addEventListener('click', event => {
     const modalData = modalsData.find(({ id }) => id === event.target.dataset?.projectid)
+
+    console.log(event.target.dataset)
 
     console.log({modalData})
 

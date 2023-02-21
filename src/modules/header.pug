@@ -1,0 +1,15 @@
+include ../data/header
+
+header.header
+    .header__progress.progress
+        .progress__value
+    .header__logo
+    .header__content
+        nav.header__nav.nav
+            ul.nav__list
+                for i in links
+                    li.nav__item
+                        a(href='#'+i.href, data-path=i.href)=i.title
+        .header__socials
+            a(href='https://github.com/di-112', target='_blank')
+                img(src='./assets/images/socials/github.svg', alt='github-icon')
