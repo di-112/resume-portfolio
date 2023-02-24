@@ -39,7 +39,7 @@ function canvasApp() {
     let theta, phi;
     let x0, y0, z0;
     init();
-    window.addEventListener('resize', init, false);
+    window.addEventListener('resize', throttle(init, 200), false);
     function init() {
         count = 0;
         numToAddEachFrame = 8;
