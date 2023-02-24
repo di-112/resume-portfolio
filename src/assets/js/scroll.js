@@ -67,5 +67,5 @@ window.addEventListener('scroll', findActiveLink, {
 })
 
 document.addEventListener('DOMContentLoaded', ()=> {
-  findActiveLink()
+  setTimeout(findActiveLink, 100)
 })
