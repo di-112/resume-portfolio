@@ -19,6 +19,7 @@
 
     @media (max-width: 1250px) {
       flex-direction: column;
+      text-align: center;
       gap: 1rem;
     }
   }
@@ -49,8 +50,14 @@
       .subtitle {
         font-size: 1.2rem;
       }
+
       width: 60%;
       padding-left: 2rem;
+
+      @media (max-width: 1250px) {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .flex {
@@ -64,6 +71,10 @@
 
       .working__block {
         width: 40%;
+
+        @media (max-width: 1250px) {
+          width: 100%;
+        }
       }
 
       @media (max-width: 1250px) {

@@ -48,6 +48,13 @@
     .skills__builders {
       transition-delay:  .6s;
     }
+
+    @media (max-width: 900px) {
+      .skills__collection {
+        opacity: 1 !important;
+        transition: none;
+      }
+    }
   }
 
   &__item {
