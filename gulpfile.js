@@ -29,7 +29,7 @@ const path = {
   src: {
     html: srcPath + "*.pug",
     css: srcPath + "assets/scss/style.scss",
-    js: srcPath + "assets/js/main.js",
+    js: [srcPath + "assets/js/main.js",  srcPath + "assets/js/sphere.js"],
     images: srcPath + "assets/images/**/*.{jpeg,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     fonts: srcPath + "assets/fonts/**/*.{eot, woff, woff2,ttf,svg}",
   },
@@ -103,12 +103,6 @@ function images() {
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
-        ]
-      })
     ]))
     .pipe(dest(path.build.images))
     .pipe(browserSync.reload({stream: true}))
