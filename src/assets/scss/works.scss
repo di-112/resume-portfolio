@@ -13,6 +13,7 @@
     p {
       font-size: 1.2rem;
       max-width: 800px;
+      margin-bottom: 2rem;
       &:first-letter {
         padding-left: 0.5rem;
       }
@@ -58,7 +59,6 @@
     display: block;
     position: relative;
     transition: opacity 0.2s ease;
-    max-width: 520px;
 
     .back {
       width: 100%;

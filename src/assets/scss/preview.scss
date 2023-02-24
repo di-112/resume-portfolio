@@ -74,6 +74,10 @@
       }
     }
   }
+
+  @media (max-width: 800px) {
+    align-items: center;
+  }
 }
 
 @keyframes colorA {

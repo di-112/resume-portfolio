@@ -37,5 +37,14 @@
         border-left: 1px solid #282828;
       }
     }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 0 1rem;
+    justify-content: center;
   }
 }
