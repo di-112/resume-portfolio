@@ -78,6 +78,7 @@
 
     @media (max-width: 1250px) {
       width: 100%;
+      display: none;
       transform: none;
     }
   }
@@ -91,13 +92,6 @@
     z-index: 5;
     transform: scale(0);
     background-size: cover;
-  }
-
-  @media (max-width: 1250px) {
-    #sphere {
-      opacity: 1;
-      transform: none;
-    }
   }
 
   &.show {

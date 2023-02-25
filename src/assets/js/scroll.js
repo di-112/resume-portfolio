@@ -1,4 +1,4 @@
-const scrollTo = element => element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+const scrollTo = element => element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
 
 document.querySelectorAll('nav a').forEach(linkNode => {
   linkNode.addEventListener('click', event => {
