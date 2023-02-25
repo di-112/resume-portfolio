@@ -8,14 +8,6 @@ const modalsData = [
         githubUrl: 'https://github.com/di-112/game-for-memory-react',
     },
     {
-        id: "books-shop",
-        name: 'Магазин книг',
-        description: 'Проект представляет из себя небольшой магазин книг с возможностью фильтрации товаров и их добавлением в корзину',
-        stack: 'React, TS, Zustand, Material UI, React Query, Eslint, Vite',
-        url: 'https://di-112.github.io/books-shop/',
-        githubUrl: 'https://github.com/di-112/books-shop'
-    },
-    {
         id: "bets-statistics",
         name: 'Аналитика ставок на футбол',
         description: 'Приложение предназначено для ведения стастики ставок на футбол с возможностью выбора лиги. Реализован собственный backend и развернут сервер на ru vds',
@@ -23,6 +15,14 @@ const modalsData = [
         stackBack: 'Sqlite, Knex, Express',
         url: 'http://195.133.48.137:3000',
         githubUrl: 'https://github.com/di-112/bets-statistics-react'
+    },
+    {
+        id: "books-shop",
+        name: 'Магазин книг',
+        description: 'Проект представляет из себя небольшой магазин книг с возможностью фильтрации товаров и их добавлением в корзину',
+        stack: 'React, TS, Zustand, Material UI, React Query, Eslint, Vite',
+        url: 'https://di-112.github.io/books-shop/',
+        githubUrl: 'https://github.com/di-112/books-shop'
     },
     {
         id: "layout-web-development-company",
