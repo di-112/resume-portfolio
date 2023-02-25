@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
-
-$maxWidth: 1920;
-@mixin font($pcSize, $mobSize) {
-  $addSize: $pcSize - $mobSize;
-  $maxWidth: $maxWidth - 320;
-  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-}
+@import "mixins";
 
 :root {
   --primary-color: #08fdd8;
@@ -168,8 +162,8 @@ section {
     }
   }
 
-  @media (max-width: 800px) {
-    opacity: 1 !important;
+  @media (max-width: 1250px) {
+    opacity: 1;
   }
 }
 
