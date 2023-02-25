@@ -46,7 +46,7 @@
     }
 
     .skills__builders {
-      transition-delay:  .6s;
+      transition-delay: .6s;
     }
   }
 
@@ -86,12 +86,15 @@
   #sphere {
     flex: 0 0 40%;
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    height: 100%;
     position: relative;
     z-index: 5;
     transform: scale(0);
     background-size: cover;
+
+    @media (max-width: 1440px) {
+      height: auto;
+    }
   }
 
   &.show {
