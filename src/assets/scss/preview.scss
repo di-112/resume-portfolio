@@ -17,7 +17,7 @@
 
       h1 {
         line-height: 100%;
-        @include font(80, 32);
+        @include font(80, 26);
         font-weight: 700;
         position: relative;
         margin-bottom: 52px;
@@ -43,7 +43,7 @@
     }
 
     p {
-      @include font(40, 24);
+      @include font(40, 18);
       font-weight: 700;
       position: relative;
       line-height: 100%;

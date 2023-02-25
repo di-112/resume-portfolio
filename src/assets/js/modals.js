@@ -19,7 +19,7 @@ const modalsData = [
     {
         id: "books-shop",
         name: 'Магазин книг',
-        description: 'Проект представляет из себя небольшой магазин книг с возможностью фильтрации товаров и их добавлением в корзину',
+        description: 'Проект представляет из себя небольшой магазин книг с возможностью фильтрации товаров и их добавления в корзину',
         stack: 'React, TS, Zustand, Material UI, React Query, Eslint, Vite',
         url: 'https://di-112.github.io/books-shop/',
         githubUrl: 'https://github.com/di-112/books-shop'

@@ -2,10 +2,11 @@
 
   &__content {
     margin-top: 2rem;
-  }
 
-  .subtitle {
-    font-size: 1.2rem;
+    span {
+      color: var(--primary-color);
+      margin-right: 1rem;
+    }
   }
 
   &__item {
@@ -23,13 +24,12 @@
 
   .map__container {
     text-align: center;
-    padding: 1rem;
+    margin-top: 2rem;
   }
-}
 
-#map {
-  display: none !important;
-  .leaflet-control-container {
-    display: none !important;
+  .map {
+    @media (max-width: 1250px) {
+      width: 100%;
+    }
   }
 }

@@ -8,6 +8,7 @@
 
     @media (max-width: 1250px) {
       flex-direction: column;
+      gap: 2rem;
       align-items: flex-start;
     }
   }
@@ -18,8 +19,16 @@
     min-width: 15%;
     flex-direction: column;
 
+    @media (max-width: 1250px) {
+      gap: 2rem;
+    }
+
     &.offset {
       padding-top: 2rem;
+
+      @media (max-width: 1250px) {
+        padding-top: 0;
+      }
     }
   }
 
@@ -62,7 +71,6 @@
     display: flex;
     align-items: center;
     cursor: default;
-    font-size: 1.2rem;
 
     &:hover {
       color: var(--primary-color);
