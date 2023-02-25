@@ -1,4 +1,4 @@
-window.addEventListener("load", windowLoadHandler, false);
+window.addEventListener("DOMContentLoaded", windowLoadHandler, false);
 let sphereRad = 280; // радиус
 let scale = 1; // масштаб
 function windowLoadHandler() {

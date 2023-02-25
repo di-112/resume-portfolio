@@ -247,7 +247,6 @@ function initOciliator(remove) {
           save();
           break;
         default:
-        // console.log(event.keyCode);
       }
     }
 
