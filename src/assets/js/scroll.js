@@ -18,11 +18,9 @@ function progressBar() {
   document.querySelector('.progress').style.width = scrollTop / maxScrollTop * 100 + '%';
 }
 
-const throttleProgressBar = throttle(progressBar, 300)
-
 window.addEventListener('load', progressBar)
-window.addEventListener('resize', throttleProgressBar)
-window.addEventListener('scroll', throttleProgressBar, {
+window.addEventListener('resize', progressBar)
+window.addEventListener('scroll', progressBar, {
   passive: true
 });
 
