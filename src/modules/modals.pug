@@ -1,21 +1,33 @@
-.modal
-    .modal__overlay
-    .modal__content
-        .modal__close
-            span
-        h2.modal__title.subtitle
-        .modal__flex
-            .modal__img
-            .modal__info
-                .modal__description.description
-                    h3.description__title.subtitle Описание:
-                    p.description__content.offset
-                .modal__stack.stack
-                    h3.stack__title.subtitle Стек:
-                    p.stack__content.offset
-                .modal__url.url
-                    h3.url__title.subtitle Url:
-                    a.url__content.offset(href='/', target='_blank')
-                .modal__github-url.github-url
-                    h3.github-url__title.subtitle GitHub:
-                    a.github-url__content.offset(href='/', target='_blank')
+include ../data/modals
+
+mixin renderModal(modal)
+    div(class="modal " + modal.id)
+        .modal__overlay
+        .modal__content
+            .modal__close
+                span
+            div.modal__slider
+                .swiper
+                    .swiper-wrapper
+                        for i in modal.projects
+                            .modal__slide.swiper-slide
+                                h2.modal__title.subtitle=i.project
+                                .modal__info.modal__info_multi
+                                    .modal__block.skew-border
+                                        h3.subtitle Команда:
+                                        p=i.team
+                                    .modal__block.skew-border
+                                        h3.subtitle Роль:
+                                        p=i.role
+                                    .modal__block.skew-border
+                                        h3.subtitle Стек:
+                                        p=i.stack.join(', ')
+                                .modal__info
+                                    .modal__block.skew-border
+                                        h3.subtitle Описание:
+                                        p=i.description
+                    button.swiper-button-prev
+                    button.swiper-button-next
+
+for i in modalsData
+    +renderModal(i)

@@ -1,61 +1,36 @@
 .skills {
   &__content {
+    margin: auto;
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
     padding-left: 2rem;
+    justify-content: center;
+    gap: 4rem;
     flex-grow: 1;
-    align-items: center;
 
     @media (max-width: 1250px) {
-      flex-direction: column;
       gap: 2rem;
+      flex-direction: column;
       align-items: flex-start;
     }
   }
 
-  &__block {
-    gap: 4rem;
+  &__list {
+    max-width: 75%;
     display: flex;
-    min-width: 15%;
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
-    @media (max-width: 1250px) {
-      gap: 2rem;
-    }
-
-    &.offset {
-      padding-top: 2rem;
-
-      @media (max-width: 1250px) {
-        padding-top: 0;
+  &__collection {
+    opacity: 0;
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        padding-left: 1rem * ($i);
       }
     }
-  }
 
-  .skills__collection {
-    opacity: 0;
-  }
-
-  &.show {
-    .skills__collection {
-      opacity: 1;
-      transition: opacity 0.5s ease;
-    }
-
-    .skills__classic {
-      transition-delay: .15s;
-    }
-
-    .skills__state {
-      transition-delay: .3s;
-    }
-
-    .skills__frameworks {
-      transition-delay: .45s;
-    }
-
-    .skills__builders {
-      transition-delay: .6s;
+    @media (max-width: 600px) {
+      padding-left: 0 !important;
     }
   }
 
@@ -66,49 +41,39 @@
     }
   }
 
-  &__item {
+  .skill {
     gap: 0.5rem;
     display: flex;
     align-items: center;
-    cursor: default;
+    margin-bottom: 0.5rem;
 
-    &:hover {
-      color: var(--primary-color);
+    &__name {
+      padding: 4px 12px 4px 18px;
+      transform: translateX(-1rem);
+      background: #2d2e2d;
+      border-radius: 0.5rem;
     }
 
-    margin-bottom: 12px;
-  }
-
-  #sphere-wrap {
-    height: 500px;
-    transform: translateX(100px);
-    text-align: center;
-
-    @media (max-width: 1250px) {
-      width: 100%;
-      display: none;
-      transform: none;
-    }
-  }
-
-  #sphere {
-    flex: 0 0 40%;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 5;
-    transform: scale(0);
-    background-size: cover;
-
-    @media (max-width: 1440px) {
-      height: auto;
+    &__img {
+      box-sizing: content-box;
+      border: 8px solid var(--background-color);
+      border-radius: 50%;
+      position: relative;
+      z-index: 2
     }
   }
 
   &.show {
-    #sphere {
-      transform: scale(1);
-      transition: transform 1.1s ease 0s;
+    .skills__collection {
+      opacity: 1;
+      position: relative;
+      transition: opacity 0.35s linear .15s;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          transition-delay: .15s * $i;
+        }
+      }
     }
   }
 }

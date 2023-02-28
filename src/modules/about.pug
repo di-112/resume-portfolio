@@ -1,7 +1,7 @@
 include ../data/about
 
 mixin renderPrevJob(job)
-    .working__block
+    div(class=`working__block ${job.projectsId}`)
         h3.subtitle=job.company
         p=job.period
         p
@@ -12,35 +12,36 @@ mixin renderPrevJob(job)
             span Обязанности:
             | &nbsp
             =job.duties
+        button(data-projectId=job.projectsId) Участие в проектах
 
 section.about#about
     .section-background About
     h2.title.tag-decorated Обо мне
     .about__content
-        .about__flex
-            .about__me
-                h3.subtitle Качества
-                ul
-                  for i in characteristics
-                      li=i
-            .about__education.education
-                h3.subtitle Образование
-                p.education__years=education.period
-                p.education__university
-                    span ВУЗ:
-                    | &nbsp;
-                    =education.university
-                p.education__faculty
-                    span Факультет:
-                    | &nbsp;
-                    =education.faculty
-                p.education__speciality
-                    span Направление:
-                    | &nbsp;
-                    =education.direction
-        .about__working.working
-            h3.subtitle Опыт работы
-            .flex
-                +renderPrevJob(prevJobs[0])
-                +renderPrevJob(prevJobs[1])
-            +renderPrevJob(prevJobs[2])
+        div.about__flex-container
+            .about__column
+                .about__me
+                    h3.subtitle Качества
+                    ul
+                      for i in characteristics
+                          li=i
+                .about__education
+                    h3.subtitle Образование
+                    p=education.period
+                    p
+                        strong ВУЗ: &nbsp
+                        =education.university
+                    p
+                        strong Факультет: &nbsp
+                        =education.faculty
+                    p
+                        strong Направление: &nbsp
+                        =education.direction
+            .about__column
+                .about__working.working
+                    h3.subtitle Опыт работы
+                    .working__row
+                        +renderPrevJob(prevJobs[0])
+                        +renderPrevJob(prevJobs[1])
+                    .working__row
+                        +renderPrevJob(prevJobs[2])

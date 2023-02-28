@@ -29,7 +29,7 @@ const path = {
   src: {
     html: srcPath + "*.pug",
     css: srcPath + "assets/scss/style.scss",
-    js: [srcPath + "assets/js/main.js",  srcPath + "assets/js/sphere.js", srcPath + "assets/js/throttle.js"],
+    js: srcPath + "assets/js/main.js",
     images: srcPath + "assets/images/**/*.{jpeg,jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
     fonts: srcPath + "assets/fonts/**/*.{eot, woff, woff2,ttf,svg}",
   },

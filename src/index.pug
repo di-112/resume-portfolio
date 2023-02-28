@@ -5,17 +5,15 @@ html(lang='en')
         meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
         link(rel="stylesheet", href="assets/css/style.min.css")
         link(rel="stylesheet", href="assets/css/swiper-bundle.min.css")
-        link(rel="icon", href="assets/images/skills/react.png")
-        script(src="assets/js/throttle.min.js")
-        script(src="assets/js/sphere.min.js")
+        link(rel="icon", href="assets/images/favicon.png")
     body
         include ./modules/header
+        include ./modules/aside
         .wrapper
             include ./modules/preview
-            include ./modules/skills
             include ./modules/about
-            include ./modules/works
-            include ./modules/contacts
-        include ./modules/modals
+            include ./modules/modals
+            include ./modules/skills
+            include modules/portfolio
         script(src="assets/js/main.min.js", type='module')
         title Dmitry Vezankin (Frontend Developer)

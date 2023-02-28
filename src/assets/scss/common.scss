@@ -3,7 +3,7 @@
 @import "mixins";
 
 :root {
-  --primary-color: #08fdd8;
+  --primary-color: #08fcd8ff;
   --secondary-color: #909096;
   --background-color: #1d1d1d;
   --header-background-color: #181818;
@@ -24,13 +24,13 @@ ul, li {
 
 .title {
   color: var(--primary-color);
-  @include font(32, 22);
+  @include font(24, 22);
   margin-bottom: 2rem;
 }
 
 .subtitle {
   color: var(--primary-color);
-  @include font(22, 18);
+  @include font(18, 16);
   margin-bottom: 1.5rem;
   margin-left: -8px;
 }
@@ -64,6 +64,16 @@ ul, li {
   }
 }
 
+.wrapper {
+  max-width: 1440px;
+  padding: 0 6rem;
+  margin: 0 auto;
+
+  @media (max-width: 800px) {
+    padding: 0 3rem;
+  }
+}
+
 h1.tag-decorated {
   &::before {
     content: '<h1>';
@@ -86,6 +96,17 @@ h2.tag-decorated {
   }
 }
 
+h3.tag-decorated {
+  &::before {
+    content: '<h3>';
+  }
+
+  &::after {
+    content: '</h3>';
+  }
+}
+
+
 p.tag-decorated {
   &::before {
     content: '<p>';
@@ -99,7 +120,6 @@ p.tag-decorated {
 body {
   background: var(--background-color);
   overflow-x: hidden;
-  height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -118,45 +138,70 @@ body {
 
 a {
   text-decoration: none;
+  transition: color 0.2s ease;
   color: var(--secondary-color);
 
   &:hover, &.active {
     color: var(--primary-color);
-    transition: color 0.2s ease;
   }
 }
 
 button {
-  padding: 12px 32px;
+  padding: 12px 16px;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
   background: transparent;
-  @include font(14, 12);
+  @include font(13, 11);
   letter-spacing: 4px;
   cursor: pointer;
   position: relative;
   display: inline-block;
   z-index: 1;
+  overflow: hidden;
 
-  &:hover {
-    background: var(--primary-color);
-    color: var(--background-color);
-    transition: background-color 0.2s linear;
+  &.swiper-button-disabled, &.disabled {
+    border: 1px solid grey;
+    color: grey;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:not(.swiper-button-next, .swiper-button-prev) {
+    &:before {
+      content: '';
+      position: absolute;
+      left: -15%;
+      top: 0;
+      width: 0;
+      z-index: -1;
+      transform: skew(20deg) translateX(0%);
+      height: 100%;
+      background: var(--primary-color);
+      transition: width 0.5s ease;
+    }
+
+    &:hover {
+      &:before {
+        height: 100%;
+        width: 150%;
+      }
+
+      color: var(--background-color);
+    }
   }
 }
 
 section {
   min-height: 100vh;
-  padding: 6rem 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  padding: 6rem 0 2rem;
   opacity: 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
   transition: opacity 0.5s ease;
-  @include font(20, 14);
+  @include font(16, 12);
   &.show {
     opacity: 1;
-
     .section-background {
       opacity: 0.1;
       transition: opacity 1.5s ease;
@@ -185,6 +230,7 @@ section {
   position: absolute;
   right: -7rem;
   top: 5%;
+  user-select: none;
   font-size: 20rem;
   color: var(--secondary-color);
   font-weight: 700;
@@ -196,12 +242,44 @@ section {
   }
 }
 
-.wrapper {
-  max-width: 1650px;
-  padding: 0 6rem;
-  margin: 0 auto;
+.skew-border {
+  background: #262a2b !important;
+  border: 1px solid #252727;
 
-  @media (max-width: 800px) {
-    padding: 0 3rem;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: var(--primary-color);
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    transform: skew(1.5deg, 1.5deg);
   }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  border: none !important;
+  height: 1rem;
+
+  &:after {
+    font-size: 1rem !important;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  &:hover {
+    background: none;
+  }
+}
+
+.swiper-button-next {
+  right: 1rem !important;
+}
+
+.swiper-button-prev {
+  left: 1rem !important;
 }

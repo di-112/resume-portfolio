@@ -9,6 +9,17 @@
   gap: 100px;
   position: relative;
 
+  &__waves-wrapper:after {
+    content: 'Frontend developer';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: var(--primary-color);
+    height: calc(100% + 0.5rem);
+    animation: waves 1.5s ease-in-out infinite forwards;
+  }
+
   &.show {
     .preview__content {
       position: relative;
@@ -25,13 +36,8 @@
         & span {
           opacity: 0;
           display: inline-block;
-          animation: .35s colorA;
+          animation: .35s paintWord;
           animation-fill-mode: forwards;
-
-          &:hover {
-            color: var(--primary-color) !important;
-            opacity: 1 !important;;
-          }
 
           @for $i from 1 through 20 {
             &:nth-child(#{$i}) {
@@ -42,28 +48,21 @@
       }
     }
 
-    p {
+    h3 {
       @include font(40, 18);
       font-weight: 700;
       position: relative;
       line-height: 100%;
       transform: translateX(42px);
 
-      & span {
+      span {
         display: inline-block;
-        animation: .35s colorA;
-        animation-fill-mode: forwards;
-        opacity: 0;
+        color: transparent !important;
+        -webkit-text-stroke: 1px var(--primary-color);
 
         &:hover {
           color: var(--primary-color) !important;
-          opacity: 1 !important;;
-        }
-
-        @for $i from 1 through 20 {
-          &:nth-child(#{$i}) {
-            animation-delay: ((0.05s * $i) + 14 * 0.05s);
-          }
+          opacity: 1 !important;
         }
       }
     }
@@ -80,14 +79,25 @@
   }
 }
 
-@keyframes colorA {
+@keyframes paintWord {
   0% {
     color: var(--primary-color);
     opacity: 1;
     transform: scale(1.5);
   }
   100% {
-    color: white;
+    color: var(--white);
     opacity: 1;
+  }
+}
+
+@keyframes waves {
+  0%, 100% {
+    opacity: 1;
+    clip-path: polygon(0 66%, 11% 59%, 18% 51%, 26% 46%, 35% 41%, 48% 44%, 55% 54%, 63% 63%, 76% 60%, 82% 50%, 92% 48%, 100% 53%, 100% 100%, 0% 100%);
+  }
+  50% {
+    opacity: 1;
+    clip-path: polygon(0 66%, 8% 74%, 17% 77%, 28% 70%, 35% 57%, 48% 44%, 56% 39%, 69% 41%, 75% 47%, 84% 60%, 92% 61%, 100% 53%, 100% 100%, 0% 100%);
   }
 }

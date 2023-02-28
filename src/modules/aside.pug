@@ -1,0 +1,23 @@
+-
+    var socials = [
+        {
+            href: "tg://resolve?domain=d_vezankin",
+            img: 'telegram.svg'
+        },
+        {
+            href: "mailto:di150499@gmail.com",
+            img: 'mail.svg'
+        },
+        {
+            href: 'https://wa.me/89202387492',
+            img: 'whatsApp.svg'
+        }
+    ]
+
+mixin renderSocial(i)
+    a(href=i.href, target="_blank")
+        img(src='./assets/images/socials/' + i.img, width="36px")
+
+aside
+  for i in socials
+      +renderSocial(i)

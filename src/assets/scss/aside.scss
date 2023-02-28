@@ -1,0 +1,52 @@
+aside {
+  width: 64px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 4rem;
+
+  a {
+    animation: show 0.15s ease-in-out;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+
+    @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: 0.15s * ($i);
+    }
+  }
+  }
+
+  img:hover {
+    animation: vibrate 1s;
+  }
+}
+
+@keyframes vibrate {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+  }
+  20%, 40% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

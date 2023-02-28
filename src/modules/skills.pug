@@ -2,29 +2,25 @@ include ../data/skills
 
 mixin renderSKillList(items)
     ul.skills__list
-    for i in items
-        li.skills__item
-            if(i.image)
-                img(src='assets/images/skills/'+i.image width='16px' alt=i.title)
-            =i.title
+        for i in items
+            li.skills__item.skill
+                if(i.image)
+                    img.skill__img(src='assets/images/skills/'+i.image width='18px' alt=i.title)
+                .skill__name=i.title
 
 section#skills.skills
     .section-background Skills
     h2.skills__title.title.tag-decorated Навыки
     .skills__content
-        .skills__block
-            .skills__collection.skills__classic
-                h3.skills__title.subtitle Classic
-                +renderSKillList(skills.classic)
-            .skills__collection.skills__frameworks
-                h3.skills__title.subtitle UI Frameworks
-                +renderSKillList(skills.frameworks)
-        .skills__block.offset
-            .skills__collection.skills__state
-                h3.skills__title.subtitle State Managers
-                +renderSKillList(skills.stateManagers)
-            .skills__collection.skills__builders
-                h3.skills__title.subtitle Builders
-                +renderSKillList(skills.builders)
-        #sphere-wrap
-            canvas#sphere
+        .skills__collection
+            h3.skills__title.subtitle Classic
+            +renderSKillList(skills.classic)
+        .skills__collection
+            h3.skills__title.subtitle State Managers
+            +renderSKillList(skills.stateManagers)
+        .skills__collection
+            h3.skills__title.subtitle UI Frameworks
+            +renderSKillList(skills.frameworks)
+        .skills__collection
+            h3.skills__title.subtitle Builders
+            +renderSKillList(skills.builders)

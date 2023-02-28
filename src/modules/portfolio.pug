@@ -1,0 +1,32 @@
+include ../data/portfolio
+
+mixin renderPortfolioProject(project)
+    div(class='portfolio__item work' + (project.id === 'game-for-memory' ? ' active' : ''))
+        .work__img
+            img.back(src='assets/images/portfolio/'+project.image, alt=project.title, loading="lazy")
+        .work__info.info.skew-border
+            .info__item
+                h2.subtitle=project.title
+                h3.subtitle Описание:
+                p=project.description
+            .info__item
+                h3.subtitle Стек:
+                p=project.stack
+            .info__item
+                h3.subtitle Url:
+                a(href=project.url, target='_blank')=project.url
+            .info__item
+                h3.subtitle GitHub:
+                a(href=project.githubUrl, target='_blank')=project.githubUrl
+
+section.portfolio#portfolio
+    .section-background Works
+    h2.portfolio__title.title.tag-decorated Портфолио
+    p.portfolio__description Портфолио собрано из пет-проектов. Описание коммерческих работ можно найти в разедле 'Обо мне' в пункте 'Опыт работы'
+    .portfolio__content
+        .portfolio__list
+            for i in petProjects.reverse()
+                +renderPortfolioProject(i)
+    .portfolio__buttons-container
+        button.portfolio__button-prev.disabled Назад
+        button.portfolio__button-next Дальше
