@@ -21,6 +21,12 @@ modalButtonClose.forEach(button => button.addEventListener('click', hideModal))
 
 modalOverlay.forEach(overlay => overlay.addEventListener('click', hideModal))
 
+
+window.addEventListener('load',() => {
+    console.log(document.body.classList)
+    document.body.classList.remove('preload')
+})
+
 buttons.forEach(button => button.addEventListener('click', event => {
     openModal(event.target.dataset?.projectid)
 }))

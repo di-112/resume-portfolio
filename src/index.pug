@@ -1,12 +1,13 @@
 doctype html
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel="icon", href="assets/images/favicon.png")
+    link(rel="stylesheet", href="assets/css/swiper-bundle.min.css")
+    link(rel="stylesheet", href="assets/css/style.min.css")
+    title Dmitry Vezankin (Frontend Developer)
 html(lang='en')
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-        link(rel="stylesheet", href="assets/css/style.min.css")
-        link(rel="stylesheet", href="assets/css/swiper-bundle.min.css")
-        link(rel="icon", href="assets/images/favicon.png")
-    body
+    body.preload
         include ./modules/header
         include ./modules/aside
         .wrapper
@@ -16,4 +17,3 @@ html(lang='en')
             include ./modules/skills
             include modules/portfolio
         script(src="assets/js/main.min.js", type='module')
-        title Dmitry Vezankin (Frontend Developer)
